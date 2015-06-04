@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="styles/kendo.dataviz.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo.mobile.all.min.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+</head>
+<body>
+  <div id="main">
+    <div class="body">
+        <div id="events">
+          <!--<button type="button" id=backButton>Back</button>-->
+          <p id="header-text">Title Yo!</p>
+          <p id="event-text">Something Borked!</p>
+        </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        var currentEvent = window.localStorage.getItem("currentEvent");
+        console.log(currentEvent);
+        if (currentEvent == 1433804400000){
+          document.getElementById("event-text").innerHTML = "This is an wonderful event where you can see Aberdeen's greatish cooks come together and create wonderful street food.";
+          document.getElementById("header-text").innerHTML = "FoodNation";
+        }
+        else if (currentEvent == 1434150000000){
+          document.getElementById("event-text").innerHTML = "At this local animal milk tasting event you can try exotic milk from all over the north-east of scotland, featuring the wonderful Loch Ness Monster milk(tm)";
+          document.getElementById("header-text").innerHTML = "Abermilk!";
+        }
+        else if(currentEvent == 1435100400000){
+          document.getElementById("event-text").innerHTML = "This is the bi-yearly Air Rock festival featuring some of Aberdeens greatest Air Rockers - hosted by the one and only AiroSmith";
+          document.getElementById("header-text").innerHTML = "Air RockNess";
+        }
+        else if(currentEvent == 1433545200000){
+          document.getElementById("event-text").innerHTML = "This is the never seen before unvailing of the famous 'What is that painting?' event, happening for the first time ever in Aberdeen. Come and win great prizes such as blank canvases with 5000 word reports explaining the effect of capitalism on a post-human soceity.";
+          document.getElementById("header-text").innerHTML = "Art Bingo";
+        }
+        else if(currentEvent == 1435532400000 ){
+          document.getElementById("event-text").innerHTML = "Come visit this post-human-modernist event where hosts will re-examine the relationship between ironic-capital-post-humanism and the more modern movement of pre-human-post-caveman-modernity";
+          document.getElementById("header-text").innerHTML = "Is that really art?";
+        }
+        function onClick(e){
+          self.location = "main.html";
+        }
+        $("#backButton").kendoButton({
+          icon: "arrow-w",
+          click: onClick
+        });
+      });
+    </script>
+    <style>
+    .body {
+        height: 800px;
+        width: 480px;
+        margin-top: -16.5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #events {
+        height: 100%;
+        width: 100%;
+        background: url(night_sky_3-wallpaper-480x800blank.jpg) transparent no-repeat 0 bottom;
+        background-color: #000;
+      }
+    #event-text{
+      padding: 20px;
+      font-size: 23px;
+      color: #fff;
+      text-align: center;
+    }
+    #header-text{
+      padding: 50px;
+      font-size: 25px;
+      color: #fff;
+      text-align: center;
+    }
+
+    </style>
+  </div>
+</body>
+</html>
