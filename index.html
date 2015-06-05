@@ -17,6 +17,11 @@
                     <div id="calendar"></div>
                 </div>
             </div>
+            <div>
+                <div class="rectangle" id="food"><p>Food</p></div>
+                <div class="rectangle" id="art"><p>Art</p></div>
+                <div class="rectangle" id="music"><p>Music</p></div>
+            </div>
             <script>
                 $(document).ready(function() {
                     var today = new Date(),
@@ -64,6 +69,29 @@
                 });
             </script>
             <style>
+
+                .rectangle {
+                    width: 200px;
+                    height: 50px;
+                    border-radius: 10px;
+                    margin: 10px auto;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+                div .rectangle p{
+                    margin: 0 auto;
+                    font-size: 50px;
+                    color: rgb(56, 53, 68);
+                }
+                #food{
+                    background-color: #9E2C24;
+                }
+                #art{
+                    background-color: #F0FF2B;
+                }
+                #music{
+                    background-color: #4747FF;
+                }
                 #main{
                    height: 50%;
                 }
@@ -75,7 +103,7 @@
                     height: 100%;
                 }
                 body {
-                   background: url(night_sky_3-wallpaper-480x800.jpg) transparent no-repeat 0 bottom;
+                   background: url(night_sky_3-wallpaper-480x800blank.jpg) transparent no-repeat 0 bottom;
                    background-size: cover;
                    height:100%;
                 }
